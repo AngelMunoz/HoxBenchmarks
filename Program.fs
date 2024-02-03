@@ -153,7 +153,7 @@ type HtmlDslLongPageBenchmarks() =
             return! renderHoxStream stream { Items = testItems }
         }
 
-    [<Benchmark; BaselineColumn>]
+    [<Benchmark(Baseline = true)>]
     member __.RunHoxTaskSeq() = renderHoxTaskSeq { Items = testItems }
 
 
